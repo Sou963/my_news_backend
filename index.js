@@ -8,7 +8,7 @@ app.use(cors());
 app.get("/api/news", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://newsapi.org/v2/everything?q=bangladesh&apiKey=${process.env.NEWS_API_KEY}`
+      `https://newsapi.org/v2/everything?q=bangladesh&language=en&apiKey=${process.env.NEWS_API_KEY}`
     );
     res.json(response.data);
   } catch (error) {
